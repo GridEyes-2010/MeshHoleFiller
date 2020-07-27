@@ -1,0 +1,17 @@
+#include "HoleFiller"
+#include <iostream>
+
+int main(int argc,char* argv[])
+{
+    using Triangle_mesh = OpenMesh::TriMesh_ArrayKernelT<>;
+  	Triangle_mesh mesh;
+		OpenMesh::IO::read_mesh(mesh, "D:/data/holeMesh/coutRepair.stl");
+		HoleFiller::SmoothMeshBoundary(mesh);
+		for (auto hh : mesh.halfedges()) {
+			if (mesh.is_boundary(hh)) {
+				HoleFiller::hole_fillC2(mesh, hh, 3);
+			}
+		}
+		OpenMesh::IO::write_mesh(mesh, "D:/data/holeMesh/coutRepair_fix.ply");
+  return 0;
+}
