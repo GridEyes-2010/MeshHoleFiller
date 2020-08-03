@@ -1,171 +1,3 @@
-/*
-				   GNU LESSER GENERAL PUBLIC LICENSE
-					   Version 3, 29 June 2007
-
- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
- Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
-
-
-  This version of the GNU Lesser General Public License incorporates
-the terms and conditions of version 3 of the GNU General Public
-License, supplemented by the additional permissions listed below.
-
-  0. Additional Definitions.
-
-  As used herein, "this License" refers to version 3 of the GNU Lesser
-General Public License, and the "GNU GPL" refers to version 3 of the GNU
-General Public License.
-
-  "The Library" refers to a covered work governed by this License,
-other than an Application or a Combined Work as defined below.
-
-  An "Application" is any work that makes use of an interface provided
-by the Library, but which is not otherwise based on the Library.
-Defining a subclass of a class defined by the Library is deemed a mode
-of using an interface provided by the Library.
-
-  A "Combined Work" is a work produced by combining or linking an
-Application with the Library.  The particular version of the Library
-with which the Combined Work was made is also called the "Linked
-Version".
-
-  The "Minimal Corresponding Source" for a Combined Work means the
-Corresponding Source for the Combined Work, excluding any source code
-for portions of the Combined Work that, considered in isolation, are
-based on the Application, and not on the Linked Version.
-
-  The "Corresponding Application Code" for a Combined Work means the
-object code and/or source code for the Application, including any data
-and utility programs needed for reproducing the Combined Work from the
-Application, but excluding the System Libraries of the Combined Work.
-
-  1. Exception to Section 3 of the GNU GPL.
-
-  You may convey a covered work under sections 3 and 4 of this License
-without being bound by section 3 of the GNU GPL.
-
-  2. Conveying Modified Versions.
-
-  If you modify a copy of the Library, and, in your modifications, a
-facility refers to a function or data to be supplied by an Application
-that uses the facility (other than as an argument passed when the
-facility is invoked), then you may convey a copy of the modified
-version:
-
-   a) under this License, provided that you make a good faith effort to
-   ensure that, in the event an Application does not supply the
-   function or data, the facility still operates, and performs
-   whatever part of its purpose remains meaningful, or
-
-   b) under the GNU GPL, with none of the additional permissions of
-   this License applicable to that copy.
-
-  3. Object Code Incorporating Material from Library Header Files.
-
-  The object code form of an Application may incorporate material from
-a header file that is part of the Library.  You may convey such object
-code under terms of your choice, provided that, if the incorporated
-material is not limited to numerical parameters, data structure
-layouts and accessors, or small macros, inline functions and templates
-(ten or fewer lines in length), you do both of the following:
-
-   a) Give prominent notice with each copy of the object code that the
-   Library is used in it and that the Library and its use are
-   covered by this License.
-
-   b) Accompany the object code with a copy of the GNU GPL and this license
-   document.
-
-  4. Combined Works.
-
-  You may convey a Combined Work under terms of your choice that,
-taken together, effectively do not restrict modification of the
-portions of the Library contained in the Combined Work and reverse
-engineering for debugging such modifications, if you also do each of
-the following:
-
-   a) Give prominent notice with each copy of the Combined Work that
-   the Library is used in it and that the Library and its use are
-   covered by this License.
-
-   b) Accompany the Combined Work with a copy of the GNU GPL and this license
-   document.
-
-   c) For a Combined Work that displays copyright notices during
-   execution, include the copyright notice for the Library among
-   these notices, as well as a reference directing the user to the
-   copies of the GNU GPL and this license document.
-
-   d) Do one of the following:
-
-	   0) Convey the Minimal Corresponding Source under the terms of this
-	   License, and the Corresponding Application Code in a form
-	   suitable for, and under terms that permit, the user to
-	   recombine or relink the Application with a modified version of
-	   the Linked Version to produce a modified Combined Work, in the
-	   manner specified by section 6 of the GNU GPL for conveying
-	   Corresponding Source.
-
-	   1) Use a suitable shared library mechanism for linking with the
-	   Library.  A suitable mechanism is one that (a) uses at run time
-	   a copy of the Library already present on the user's computer
-	   system, and (b) will operate properly with a modified version
-	   of the Library that is interface-compatible with the Linked
-	   Version.
-
-   e) Provide Installation Information, but only if you would otherwise
-   be required to provide such information under section 6 of the
-   GNU GPL, and only to the extent that such information is
-   necessary to install and execute a modified version of the
-   Combined Work produced by recombining or relinking the
-   Application with a modified version of the Linked Version. (If
-   you use option 4d0, the Installation Information must accompany
-   the Minimal Corresponding Source and Corresponding Application
-   Code. If you use option 4d1, you must provide the Installation
-   Information in the manner specified by section 6 of the GNU GPL
-   for conveying Corresponding Source.)
-
-  5. Combined Libraries.
-
-  You may place library facilities that are a work based on the
-Library side by side in a single library together with other library
-facilities that are not Applications and are not covered by this
-License, and convey such a combined library under terms of your
-choice, if you do both of the following:
-
-   a) Accompany the combined library with a copy of the same work based
-   on the Library, uncombined with any other library facilities,
-   conveyed under the terms of this License.
-
-   b) Give prominent notice with the combined library that part of it
-   is a work based on the Library, and explaining where to find the
-   accompanying uncombined form of the same work.
-
-  6. Revised Versions of the GNU Lesser General Public License.
-
-  The Free Software Foundation may publish revised and/or new versions
-of the GNU Lesser General Public License from time to time. Such new
-versions will be similar in spirit to the present version, but may
-differ in detail to address new problems or concerns.
-
-  Each version is given a distinguishing version number. If the
-Library as you received it specifies that a certain numbered version
-of the GNU Lesser General Public License "or any later version"
-applies to it, you have the option of following the terms and
-conditions either of that published version or of any later version
-published by the Free Software Foundation. If the Library as you
-received it does not specify a version number of the GNU Lesser
-General Public License, you may choose any version of the GNU Lesser
-General Public License ever published by the Free Software Foundation.
-
-  If the Library as you received it specifies that a proxy can decide
-whether future versions of the GNU Lesser General Public License shall
-apply, that proxy's public statement of acceptance of any version is
-permanent authorization for you to choose that version for the
-Library.
- */
-
 #include <Eigen/Eigen>
 #include "HoleFiller.h"
 #include <map>
@@ -180,10 +12,10 @@ namespace {
 	using Triangle_mesh = OpenMesh::TriMesh_ArrayKernelT<>;
 	using Edge = Triangle_mesh::Edge;
 	using Halfedge = Triangle_mesh::Halfedge;
-	using FaceHandle = Triangle_mesh::FaceHandle;
-	using VertexHandle = Triangle_mesh::VertexHandle;
-	using EdgeHandle = Triangle_mesh::EdgeHandle;
-	using HalfedgeHandle = Triangle_mesh::HalfedgeHandle;
+	using FaceHandle = OpenMesh::FaceHandle;
+	using VertexHandle =OpenMesh::VertexHandle;
+	using EdgeHandle = OpenMesh::EdgeHandle;
+	using HalfedgeHandle = OpenMesh::HalfedgeHandle;
 	using Real = Triangle_mesh::Scalar;
 	using Point = Triangle_mesh::Point;
 	template<class Real>
@@ -238,7 +70,7 @@ namespace {
 		Real x = dot(a, b) / (a.length()* b.length());
 		return std::acos(x);
 	}
-	namespace Fair {
+	namespace CFair {
 		inline static  float eps__(float) { return FLT_EPSILON; }
 		inline static double eps__(double) { return DBL_EPSILON; }
 		template <class T, typename Real>
@@ -398,7 +230,7 @@ namespace {
 				average_edge_length /= edgeNum;
 				return average_edge_length;
 			}
-			static bool MeshFair(TriMeshT& mesh, std::vector<VHandleT>& freevhs, int continus)
+			static bool MeshFair(Triangle_mesh& mesh, std::vector<VertexHandle>& freevhs, int continus)
 			{
 				if (!mesh.is_trimesh())
 					return false;
@@ -761,11 +593,11 @@ void HoleFiller::SmoothMeshBoundary(Triangle_mesh& m_teeth)
 		mesh.garbage_collection();
 	};
 
-	//…æ≥˝π¬¡¢∂•µ„
+	//Âà†Èô§Â≠§Á´ãÈ°∂ÁÇπ
 	mesh.delete_isolated_vertices();
 	mesh.garbage_collection();
 
-	//…æ≥˝∑«¡˜––∂•µ„
+	//Âà†Èô§ÈùûÊµÅË°åÈ°∂ÁÇπ
 	while (true)
 	{
 		std::vector<VertexHandle>  iosvh;
@@ -868,7 +700,7 @@ void HoleFiller::SmoothMeshBoundary(Triangle_mesh& m_teeth)
 }
 
 
-static bool refineMesh(Triangle_mesh& mesh, std::vector<VertexHandle>& boundary, Real avg)
+static bool refineMesh(Triangle_mesh& mesh,  Real avg)
 {
 	using namespace std;
 	using ftype = Real;
@@ -1032,12 +864,190 @@ static bool refineMesh(Triangle_mesh& mesh, std::vector<VertexHandle>& boundary,
 
 }
 
+static bool refineMesh(Triangle_mesh& mesh, std::vector<VertexHandle>& remeshvhs, Real avg)
+{
+	using namespace std;
+	using ftype = Real;
+	ftype avelen = avg;
+	ftype angle = 17;
+	using Vertex3D = Triangle_mesh::Point;
+	mesh.request_edge_status();
+	mesh.request_face_status();
+	mesh.request_vertex_status();
+	mesh.request_face_normals();
+	mesh.request_vertex_normals();
+	mesh.update_normals();
+	OpenMesh::VPropHandleT<double>  mVertScale;
+	mesh.add_property(mVertScale, "scale");
+	Triangle_mesh::VertexOHalfedgeIter voh_iter;
+	auto v_end = mesh.vertices_end();
+	ftype msize = static_cast<ftype>(avelen);
+	auto e_end = mesh.edges_end();
+	for (auto e_it = mesh.edges_begin(); e_it != e_end; ++e_it)
+	{
+		mesh.status(*e_it).set_locked(true);
+	}
+
+	for (auto v_it : remeshvhs) {
+		if (mesh.is_valid_handle(v_it)) {
+			mesh.status(v_it).set_locked(false);
+			double total = 0.0;
+			int neiborsize = 0;
+			voh_iter = mesh.voh_iter(v_it);
+			const auto& v = mesh.point(v_it);
+			for (; voh_iter.is_valid(); ++voh_iter)
+			{
+				const auto& p = mesh.point(mesh.to_vertex_handle(*voh_iter));
+				total += (p - v).length();
+				neiborsize++;
+			}
+			mesh.property(mVertScale, v_it) = msize;
+			for (auto voh = mesh.voh_begin(v_it); voh != mesh.voh_end(v_it); ++voh) {
+				HalfedgeHandle hh = *voh;
+				EdgeHandle eh = mesh.edge_handle(hh);
+				mesh.status(eh).set_locked(false);
+			}
+		}
+	}
+	vector<EdgeHandle> mBoundaryEH;
+	vector<FaceHandle> mNewFillFace;
+    e_end = mesh.edges_end();
+    auto f_end = mesh.faces_end();
+	mNewFillFace.reserve(mesh.n_faces());
+	for (auto f_it = mesh.faces_begin(); f_it != f_end; ++f_it) {
+		mNewFillFace.push_back(*f_it);
+	}
+	ftype  alpha = static_cast<ftype>(std::sqrtf(angle));
+	auto InCircumsphere = [](
+		const Vertex3D & x,
+		const Vertex3D & a,
+		const Vertex3D & b,
+		const Vertex3D & c) {
+		auto ab = b - a;
+		auto ac = c - a;
+		double a00 = -2.0f * (ab | a);
+		double a01 = -2.0f * (ab | b);
+		double a02 = -2.0f * (ab | c);
+		double b0 = a.sqrnorm() - b.sqrnorm();
+		double a10 = -2.0f * (ac | a);
+		double a11 = -2.0f * (ac | b);
+		double a12 = -2.0f * (ac | c);
+		double b1 = a.sqrnorm() - c.sqrnorm();
+		double alpha = -(-a11 * a02 + a01 * a12 - a12 * b0 + b1 * a02 + a11 * b0 - a01 * b1)
+			/ (-a11 * a00 + a11 * a02 - a10 * a02 + a00 * a12 + a01 * a10 - a01 * a12);
+		double beta = (a10*b0 - a10 * a02 - a12 * b0 + a00 * a12 + b1 * a02 - a00 * b1)
+			/ (-a11 * a00 + a11 * a02 - a10 * a02 + a00 * a12 + a01 * a10 - a01 * a12);
+		double gamma = (-a11 * a00 - a10 * b0 + a00 * b1 + a11 * b0 + a01 * a10 - a01 * b1)
+			/ (-a11 * a00 + a11 * a02 - a10 * a02 + a00 * a12 + a01 * a10 - a01 * a12);
+		auto center = alpha * a + beta * b + gamma * c;
+		return (x - center).sqrnorm() < (a - center).sqrnorm();
+	};
+	auto Relax = [&InCircumsphere](EdgeHandle eh, Triangle_mesh& mHoleMesh) {
+		if (mHoleMesh.status(eh).locked())
+			return false;
+		HalfedgeHandle h0 = mHoleMesh.halfedge_handle(eh, 0);
+		HalfedgeHandle h1 = mHoleMesh.halfedge_handle(eh, 1);
+		auto u(mHoleMesh.point(mHoleMesh.to_vertex_handle(h0)));
+		auto v(mHoleMesh.point(mHoleMesh.to_vertex_handle(h1)));
+		auto a(mHoleMesh.point(mHoleMesh.to_vertex_handle(mHoleMesh.next_halfedge_handle(h0))));
+		auto b(mHoleMesh.point(mHoleMesh.to_vertex_handle(mHoleMesh.next_halfedge_handle(h1))));
+		if (InCircumsphere(a, u, v, b) || InCircumsphere(b, u, v, a)) {
+			if (mHoleMesh.is_flip_ok(eh)) {
+				mHoleMesh.flip(eh);
+				return true;
+			}
+			else
+				mHoleMesh.status(eh).set_selected(true);
+		}
+		return false;
+	};
+	auto Subdivide = [&alpha, &mesh, &mNewFillFace, &mVertScale, &mBoundaryEH, &Relax]() {
+		bool status = false;
+		size_t facenum = mNewFillFace.size();
+		for (size_t i = 0; i < facenum; ++i) {
+			HalfedgeHandle hh = mesh.halfedge_handle(mNewFillFace[i]);
+			VertexHandle vi = mesh.to_vertex_handle(hh);
+			VertexHandle vj = mesh.to_vertex_handle(mesh.prev_halfedge_handle(hh));
+			VertexHandle vk = mesh.to_vertex_handle(mesh.next_halfedge_handle(hh));
+			const auto& vip = mesh.point(vi);
+			const auto& vjp = mesh.point(vj);
+			const auto& vkp = mesh.point(vk);
+			auto c = (vip + vjp + vkp) / 3.0f;
+			const double vis = mesh.property(mVertScale, vi);
+			const double vjs = mesh.property(mVertScale, vj);
+			const double vks = mesh.property(mVertScale, vk);
+			double sac = (vis + vjs + vks) / 3.0f;
+			double dist_c_vi = (c - vip).length();
+			double dist_c_vj = (c - vjp).length();
+			double dist_c_vk = (c - vkp).length();
+			if ((dist_c_vi + dist_c_vj + dist_c_vk) / 3.0f < sac)
+				continue;
+			if ((alpha * dist_c_vi > sac) &&
+				(alpha * dist_c_vj > sac) &&
+				(alpha * dist_c_vk > sac) &&
+				(alpha * dist_c_vi > vis) &&
+				(alpha * dist_c_vj > vjs) &&
+				(alpha * dist_c_vk > vks)) {
+				VertexHandle ch = mesh.add_vertex(c);
+				mesh.split(mNewFillFace[i], ch);
+				for (auto vfi = mesh.vf_iter(ch); vfi.is_valid(); ++vfi)
+					if (*vfi != mNewFillFace[i])
+						mNewFillFace.push_back(*vfi);
+				for (auto vei = mesh.ve_iter(ch); vei.is_valid(); ++vei)
+					mBoundaryEH.push_back(*vei);
+				auto fei = mesh.fe_iter(mNewFillFace[i]);
+				EdgeHandle  e0 = *fei; ++fei;
+				EdgeHandle  e1 = *fei; ++fei;
+				EdgeHandle  e2 = *fei; ++fei;
+				Relax(e0, mesh);
+				Relax(e1, mesh);
+				Relax(e2, mesh);
+				mesh.property(mVertScale, ch) = sac;
+				status = true;
+			}
+		}
+		return status;
+	};
+	auto CRelax = [&mBoundaryEH, &Relax](Triangle_mesh& mHoleMesh) {
+		bool status = false;
+		for (size_t i = 0; i < mBoundaryEH.size(); ++i)
+			if (Relax(mBoundaryEH[i], mHoleMesh))
+				status = true;
+		return status;
+	};
+	for (int i = 0; i < 10; ++i) {
+		bool is_subdivided = Subdivide();
+		if (!is_subdivided)
+			break;
+		bool is_relaxed = CRelax(mesh);
+		if (!is_relaxed)
+			break;
+	}
+	for (auto e_it = mesh.edges_begin(); e_it != e_end; ++e_it)
+		if (mesh.is_boundary(*e_it))
+			mesh.status(*e_it).set_locked(false);
+	mesh.remove_property(mVertScale);
+	mesh.release_edge_status();
+	mesh.release_face_status();
+	mesh.release_vertex_status();
+	mesh.release_face_normals();
+	mesh.release_vertex_normals();
+	return true;
+
+}
+
 
 static void selectRRV(
 	Triangle_mesh& mesh, const std::vector<VertexHandle>& vhs,
 	int n, std::vector<VertexHandle>& pts)
 {
 	std::vector<bool> iscall(mesh.n_vertices(), false);
+	for (auto iv : mesh.vertices())
+	{
+		if (mesh.is_boundary(iv)) {
+			iscall[iv.idx()] = true;
+		}
+	}
 	for (auto ip : vhs)
 		iscall[ip.idx()] = true;
 	auto nvhs = vhs;
@@ -1104,21 +1114,11 @@ static Real calc_avg_length(Triangle_mesh& mesh) {
 }
 
 
-bool HoleFiller::hole_fillC1(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stages)
+
+static size_t minAreaAndDihedral(Triangle_mesh& mesh, 
+	HalfedgeHandle& hh, Triangle_mesh& hole_mesh,std::vector<VertexHandle>& boundary_vertex_)
 {
-	if (!mesh.is_boundary(hh)) {
-		return false;
-	}
-
-	if (!mesh.has_edge_status())
-		mesh.request_edge_status();
-	if (!mesh.has_face_status())
-		mesh.request_face_status();
-	if (!mesh.has_vertex_status())
-		mesh.request_vertex_status();
-	Triangle_mesh::VertexHandle old_last_handle = *(--mesh.vertices_end());
-
-	std::vector<VertexHandle> boundary_vertex_;
+	boundary_vertex_.clear();
 	std::vector<VertexHandle> opposite_vertex_;
 	HalfedgeHandle ch = hh;
 	do {
@@ -1166,27 +1166,146 @@ bool HoleFiller::hole_fillC1(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 	}
 	std::vector< EdgeHandle > hole_edge_;
 	std::vector< FaceHandle > hole_triangle_;
-	Triangle_mesh hole_mesh;
+	hole_mesh.clean();
 	std::vector<VertexHandle> boundary;
 	boundary.reserve(boundary_vertex_.size());
 	for (auto& ib : boundary_vertex_) {
 		boundary.emplace_back(hole_mesh.add_vertex(mesh.point(ib)));
 	}
+	 fill(hole_mesh, boundary, l_, hole_edge_,
+		hole_triangle_, 0, nv - 1);
+	 return boundary.size();
+}
 
 
-	if (fill(hole_mesh, boundary, l_, hole_edge_,
-		hole_triangle_, 0, nv - 1) && boundary_vertex_.size() > 10) {
-		if (_stages <= 1)
-			return true;
+static size_t minArea(Triangle_mesh& mesh,
+	HalfedgeHandle& hh, Triangle_mesh& hole_mesh, 
+	std::vector<VertexHandle>& boundary_vertex_)
+{
+    std::vector<Point> loops;
+	std::vector<int> tris;
+	boundary_vertex_.clear();
+	HalfedgeHandle ch = hh;
+	hole_mesh.clean();
+	do {
+		boundary_vertex_.push_back(mesh.from_vertex_handle(ch));
+		int c = 0;
+		VertexHandle vh = mesh.to_vertex_handle(ch);
+		boundary_vertex_.push_back(vh);
+		loops.push_back(mesh.point(vh));
+		hole_mesh.add_vertex(mesh.point(vh));
+		for (Triangle_mesh::VertexOHalfedgeIter voh_it(mesh, vh); voh_it.is_valid(); ++voh_it)
+			if (mesh.is_boundary(*voh_it))
+				c++;
+		if (c >= 2) {
+			HalfedgeHandle  op = mesh.opposite_halfedge_handle(ch);
+			typename Triangle_mesh::VertexOHalfedgeIter voh_it(mesh, op);
+			ch = *(++voh_it);
+		}
+		else
+			ch = mesh.next_halfedge_handle(ch);
+	} while (ch != hh);
+	int size = static_cast<int>(loops.size());
+	if (size < 3)
+		return false;
+	auto area = [&loops](int i, int j, int k) {
+		Point a = loops[i];
+		Point b = loops[j];
+		Point c = loops[k];
+		Point n((b - a) % (c - b));
+		return static_cast<Real>(0.5 * n.norm());
+	};
+	std::function<void(std::vector<int>& tris,
+		const std::vector<int>& hole_id,
+		NMatrix<int> &minimum_weight_index,
+		int begin, int end)>AddHoleToMesh;
+	AddHoleToMesh = [&AddHoleToMesh](
+		std::vector<int>& tris,
+		const std::vector<int>& hole_id,
+		NMatrix<int> &minimum_weight_index,
+		int begin, int end) {
+		if (end - begin > 1) {
+			int cu = minimum_weight_index(begin,end);
+			tris.push_back(hole_id[begin]);
+			tris.push_back(hole_id[cu]);
+			tris.push_back(hole_id[end]);
+			AddHoleToMesh(tris, hole_id, minimum_weight_index, begin, cu);
+			AddHoleToMesh(tris, hole_id, minimum_weight_index, cu, end);
+		}
+	};
+	NMatrix<Real> minimum_weight(size,size,0);
+	NMatrix<int> minimum_weight_index(size, size,-1);
+	std::vector<int> ids;
+	ids.reserve(size);
+	for (int ic = 0; ic < size; ++ic)
+		ids.push_back(ic);
+	tris.clear();
+	tris.reserve(size * 3);
+	for (int j = 2; j < size; ++j) {
+		for (int i = 0; i < size - j; ++i) {
+			Real min = (Real)FLT_MAX;
+			int index = -1;
+			int k = i + j;
+			for (int m = i + 1; m < k; m++) {
+				Real farea = area(i, m, k);
+				Real val = minimum_weight(i,m) + minimum_weight(m,k) + farea;
+				if (val < min) {
+					min = val; index = m;
+				}
+			}
+			minimum_weight(i,k) = min;
+			minimum_weight_index(i,k) = index;
+		}
+	}
+	AddHoleToMesh(tris, ids, minimum_weight_index, 0, size - 1);
+	for (size_t i = 0; i < tris.size(); i += 3) {
+		hole_mesh.add_face(VertexHandle(tris[i]),
+			VertexHandle(tris[i + 1]), VertexHandle(tris[i + 2]));
+	}
+	//OpenMesh::IO::write_mesh(hole_mesh, "D:/data/dataArrangle/38834/curve/init.obj");
+	std::cout << "InitMesh is ok!" << std::endl;
+	return boundary_vertex_.size();
+}
+
+bool HoleFiller::hole_fillC1(Triangle_mesh& mesh, HalfedgeHandle& hh, FixType type)
+{
+	if (!mesh.is_boundary(hh)) {
+		return false;
+	}
+	if (!mesh.has_edge_status())
+		mesh.request_edge_status();
+	if (!mesh.has_face_status())
+		mesh.request_face_status();
+	if (!mesh.has_vertex_status())
+		mesh.request_vertex_status();
+	Triangle_mesh hole_mesh;
+	std::vector<VertexHandle> boundary_vertex_;
+	std::vector<FaceHandle> hole_triangle_;
+	size_t  nb;
+	switch (type)
+	{
+	case FixType::idMinArea:
+		nb = minArea(mesh, hh, hole_mesh, boundary_vertex_);
+		break;
+	case FixType::idMinAreaMaxDiheral:
+		nb = minAreaAndDihedral(mesh, hh, hole_mesh, boundary_vertex_);
+		break;
+	case FixType::idMinAreaMaxDiheralNormal:
+		//Todo
+		assert("Todo");
+		break;
+	}
+	if (nb >= 8) {
 		Triangle_mesh chole = hole_mesh;
 
 		Real avge = calc_avg_length(mesh);
 
-		if (refineMesh(hole_mesh, boundary, avge))
+		if (refineMesh(hole_mesh, avge))
 		{
-			int nbound = (int)boundary.size();
+			int nbound = (int)nb;
 			int nhole = (int)hole_mesh.n_vertices();
 			auto points = hole_mesh.points();
+
 			for (int i = nbound; i < nhole; ++i) {
 				boundary_vertex_.push_back(mesh.add_vertex(points[i]));
 			}
@@ -1195,9 +1314,10 @@ bool HoleFiller::hole_fillC1(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 				int v0 = fv->idx(); ++fv;
 				int v1 = fv->idx(); ++fv;
 				int v2 = fv->idx();
-				mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
+				hole_triangle_.push_back(mesh.add_face(boundary_vertex_[v0],
+					boundary_vertex_[v1], boundary_vertex_[v2]));
 			}
-			Fair::SmoothMesh meshfair;
+			CFair::SmoothMesh meshfair;
 			std::vector<VertexHandle> fairvhs;
 			selectRRV(mesh, boundary_vertex_, 2, fairvhs);
 			for (auto iv : mesh.vertices()) {
@@ -1217,7 +1337,7 @@ bool HoleFiller::hole_fillC1(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 				std::cout << "poisson fail!" << std::endl;
 		}
 		else {
-			int nbound = (int)boundary.size();
+			int nbound = (int)nb;
 			int nhole = (int)chole.n_vertices();
 			auto points = chole.points();
 			for (int i = nbound; i < nhole; ++i) {
@@ -1228,13 +1348,14 @@ bool HoleFiller::hole_fillC1(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 				int v0 = fv->idx(); ++fv;
 				int v1 = fv->idx(); ++fv;
 				int v2 = fv->idx();
-				mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
+				hole_triangle_.push_back(mesh.add_face(boundary_vertex_[v0],
+					boundary_vertex_[v1], boundary_vertex_[v2]));
 			}
 		}
 	}
 	else
 	{
-		int nbound = (int)boundary.size();
+		int nbound = (int)nb;
 		int nhole = (int)hole_mesh.n_vertices();
 		auto points = hole_mesh.points();
 		for (int i = nbound; i < nhole; ++i) {
@@ -1245,158 +1366,8 @@ bool HoleFiller::hole_fillC1(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 			int v0 = fv->idx(); ++fv;
 			int v1 = fv->idx(); ++fv;
 			int v2 = fv->idx();
-			mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
-		}
-	}
-	removeDegeneratedFaces(mesh, hole_triangle_);
-	mesh.release_edge_status();
-	mesh.release_face_status();
-	mesh.release_vertex_status();
-	return true;
-}
-
-bool HoleFiller::hole_fillC0(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stages)
-{
-	if (!mesh.is_boundary(hh)) {
-		return false;
-	}
-
-	if (!mesh.has_edge_status())
-		mesh.request_edge_status();
-	if (!mesh.has_face_status())
-		mesh.request_face_status();
-	if (!mesh.has_vertex_status())
-		mesh.request_vertex_status();
-	Triangle_mesh::VertexHandle old_last_handle = *(--mesh.vertices_end());
-
-	std::vector<VertexHandle> boundary_vertex_;
-	std::vector<VertexHandle> opposite_vertex_;
-	HalfedgeHandle ch = hh;
-	do {
-		boundary_vertex_.push_back(mesh.from_vertex_handle(ch));
-		opposite_vertex_.push_back(mesh.to_vertex_handle
-		(mesh.next_halfedge_handle(mesh.opposite_halfedge_handle(ch))));
-		int c = 0;
-		VertexHandle vh = mesh.to_vertex_handle(ch);
-		for (Triangle_mesh::VertexOHalfedgeIter voh_it(mesh, vh); voh_it.is_valid(); ++voh_it)
-			if (mesh.is_boundary(*voh_it))
-				c++;
-		if (c >= 2) {
-			HalfedgeHandle  op = mesh.opposite_halfedge_handle(ch);
-			typename Triangle_mesh::VertexOHalfedgeIter voh_it(mesh, op);
-			ch = *(++voh_it);
-		}
-		else
-			ch = mesh.next_halfedge_handle(ch);
-	} while (ch != hh);
-	int nv = (int)boundary_vertex_.size();
-	NMatrix<Weight> w_(nv, nv);
-	NMatrix<int> l_(nv, nv, 0);
-	for (int i = 0; i < nv - 1; ++i)
-		w_(i, i + 1) = Weight(0, 0, 0);
-	for (int j = 2; j < nv; ++j)
-	{
-#pragma omp parallel for shared(j)
-		for (int i = 0; i < nv - j; ++i)
-		{
-			Weight valmin;
-			int   argmin = -1;
-			for (int m = i + 1; m < i + j; ++m)
-			{
-				Weight newval = w_(i, m) + w_(m, i + j) + weight(mesh,
-					boundary_vertex_, opposite_vertex_, l_, i, m, i + j);
-				if (newval < valmin)
-				{
-					valmin = newval;
-					argmin = m;
-				}
-			}
-			w_(i, i + j) = valmin;
-			l_(i, i + j) = argmin;
-		}
-	}
-	std::vector< EdgeHandle > hole_edge_;
-	std::vector< FaceHandle > hole_triangle_;
-	Triangle_mesh hole_mesh;
-	std::vector<VertexHandle> boundary;
-	boundary.reserve(boundary_vertex_.size());
-	for (auto& ib : boundary_vertex_) {
-		boundary.emplace_back(hole_mesh.add_vertex(mesh.point(ib)));
-	}
-
-
-	if (fill(hole_mesh, boundary, l_, hole_edge_,
-		hole_triangle_, 0, nv - 1) && boundary_vertex_.size() > 10) {
-		if (_stages <= 1)
-			return true;
-		Triangle_mesh chole = hole_mesh;
-
-		Real avge = calc_avg_length(mesh);
-
-		if (refineMesh(hole_mesh, boundary, avge))
-		{
-			int nbound = (int)boundary.size();
-			int nhole = (int)hole_mesh.n_vertices();
-			auto points = hole_mesh.points();
-			for (int i = nbound; i < nhole; ++i) {
-				boundary_vertex_.push_back(mesh.add_vertex(points[i]));
-			}
-			for (auto f : hole_mesh.faces()) {
-				auto fv = hole_mesh.fv_begin(f);
-				int v0 = fv->idx(); ++fv;
-				int v1 = fv->idx(); ++fv;
-				int v2 = fv->idx();
-				mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
-			}
-			Fair::SmoothMesh meshfair;
-			std::vector<VertexHandle> fairvhs;
-			selectRRV(mesh, boundary_vertex_, 2, fairvhs);
-			for (auto iv : mesh.vertices()) {
-				mesh.status(iv).set_locked(true);
-			}
-			for (auto iv : boundary_vertex_) {
-				mesh.status(iv).set_locked(false);
-			}
-			OpenMesh::Smoother::SmootherT<Triangle_mesh>::Continuity
-				continuity = OpenMesh::Smoother::SmootherT<Triangle_mesh>::C1;
-			OpenMesh::Smoother::SmootherT<Triangle_mesh>::Component
-				component = OpenMesh::Smoother::SmootherT<Triangle_mesh>::Tangential_and_Normal;
-			OpenMesh::Smoother::JacobiLaplaceSmootherT<Triangle_mesh> smoother(mesh);
-			smoother.initialize(component, continuity);
-			smoother.smooth(5);
-			if (!meshfair.MeshFair(mesh, fairvhs, 0))
-				std::cout << "poisson fail!" << std::endl;
-		}
-		else {
-			int nbound = (int)boundary.size();
-			int nhole = (int)chole.n_vertices();
-			auto points = chole.points();
-			for (int i = nbound; i < nhole; ++i) {
-				boundary_vertex_.push_back(mesh.add_vertex(points[i]));
-			}
-			for (auto f : chole.faces()) {
-				auto fv = chole.fv_begin(f);
-				int v0 = fv->idx(); ++fv;
-				int v1 = fv->idx(); ++fv;
-				int v2 = fv->idx();
-				mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
-			}
-		}
-	}
-	else
-	{
-		int nbound = (int)boundary.size();
-		int nhole = (int)hole_mesh.n_vertices();
-		auto points = hole_mesh.points();
-		for (int i = nbound; i < nhole; ++i) {
-			boundary_vertex_.push_back(mesh.add_vertex(points[i]));
-		}
-		for (auto f : hole_mesh.faces()) {
-			auto fv = hole_mesh.fv_begin(f);
-			int v0 = fv->idx(); ++fv;
-			int v1 = fv->idx(); ++fv;
-			int v2 = fv->idx();
-			mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
+			hole_triangle_.push_back(mesh.add_face(boundary_vertex_[v0],
+				boundary_vertex_[v1], boundary_vertex_[v2]));
 		}
 	}
 	removeDegeneratedFaces(mesh, hole_triangle_);
@@ -1407,89 +1378,95 @@ bool HoleFiller::hole_fillC0(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 }
 
 
-bool HoleFiller::hole_fillC2(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stages)
+bool HoleFiller::hole_fillC0(Triangle_mesh& mesh, HalfedgeHandle& hh, FixType type)
 {
 	if (!mesh.is_boundary(hh)) {
 		return false;
 	}
-
 	if (!mesh.has_edge_status())
 		mesh.request_edge_status();
 	if (!mesh.has_face_status())
 		mesh.request_face_status();
 	if (!mesh.has_vertex_status())
 		mesh.request_vertex_status();
-	Triangle_mesh::VertexHandle old_last_handle = *(--mesh.vertices_end());
-
-	std::vector<VertexHandle> boundary_vertex_;
-	std::vector<VertexHandle> opposite_vertex_;
-	HalfedgeHandle ch = hh;
-	do {
-		boundary_vertex_.push_back(mesh.from_vertex_handle(ch));
-		opposite_vertex_.push_back(mesh.to_vertex_handle
-		(mesh.next_halfedge_handle(mesh.opposite_halfedge_handle(ch))));
-		int c = 0;
-		VertexHandle vh = mesh.to_vertex_handle(ch);
-		for (Triangle_mesh::VertexOHalfedgeIter voh_it(mesh, vh); voh_it.is_valid(); ++voh_it)
-			if (mesh.is_boundary(*voh_it))
-				c++;
-		if (c >= 2) {
-			HalfedgeHandle  op = mesh.opposite_halfedge_handle(ch);
-			typename Triangle_mesh::VertexOHalfedgeIter voh_it(mesh, op);
-			ch = *(++voh_it);
-		}
-		else
-			ch = mesh.next_halfedge_handle(ch);
-	} while (ch != hh);
-	int nv = (int)boundary_vertex_.size();
-	NMatrix<Weight> w_(nv, nv);
-	NMatrix<int> l_(nv, nv, 0);
-	for (int i = 0; i < nv - 1; ++i)
-		w_(i, i + 1) = Weight(0, 0, 0);
-	for (int j = 2; j < nv; ++j)
-	{
-#pragma omp parallel for shared(j)
-		for (int i = 0; i < nv - j; ++i)
-		{
-			Weight valmin;
-			int   argmin = -1;
-			for (int m = i + 1; m < i + j; ++m)
-			{
-				Weight newval = w_(i, m) + w_(m, i + j) + weight(mesh,
-					boundary_vertex_, opposite_vertex_, l_, i, m, i + j);
-				if (newval < valmin)
-				{
-					valmin = newval;
-					argmin = m;
-				}
-			}
-			w_(i, i + j) = valmin;
-			l_(i, i + j) = argmin;
-		}
-	}
-	std::vector< EdgeHandle > hole_edge_;
-	std::vector< FaceHandle > hole_triangle_;
 	Triangle_mesh hole_mesh;
-	std::vector<VertexHandle> boundary;
-	boundary.reserve(boundary_vertex_.size());
-	for (auto& ib : boundary_vertex_) {
-		boundary.emplace_back(hole_mesh.add_vertex(mesh.point(ib)));
+	std::vector<VertexHandle> boundary_vertex_;
+	std::vector<FaceHandle> hole_triangle_;
+	size_t  nb;
+	switch (type)
+	{
+	case FixType::idMinArea:
+		nb = minArea(mesh, hh, hole_mesh, boundary_vertex_);
+		break;
+	case FixType::idMinAreaMaxDiheral:
+		nb = minAreaAndDihedral(mesh, hh, hole_mesh, boundary_vertex_);
+		break;
+	case FixType::idMinAreaMaxDiheralNormal:
+		//Todo
+		assert("Todo");
+		break;
 	}
+	int nbound = (int)nb;
+	int nhole = (int)hole_mesh.n_vertices();
+	auto points = hole_mesh.points();
+	for (int i = nbound; i < nhole; ++i) {
+		boundary_vertex_.push_back(mesh.add_vertex(points[i]));
+	}
+	for (auto f : hole_mesh.faces()) {
+		auto fv = hole_mesh.fv_begin(f);
+		int v0 = fv->idx(); ++fv;
+		int v1 = fv->idx(); ++fv;
+		int v2 = fv->idx();
+		hole_triangle_.push_back(mesh.add_face(boundary_vertex_[v0],
+			boundary_vertex_[v1], boundary_vertex_[v2]));
+	}
+	removeDegeneratedFaces(mesh, hole_triangle_);
+	mesh.release_edge_status();
+	mesh.release_face_status();
+	mesh.release_vertex_status();
+	return true;
+}
 
 
-	if (fill(hole_mesh, boundary, l_, hole_edge_,
-		hole_triangle_, 0, nv - 1) && boundary_vertex_.size() > 10) {
-		if (_stages <= 1)
-			return true;
+bool HoleFiller::hole_fillC2(Triangle_mesh& mesh, HalfedgeHandle& hh, FixType type)
+{
+	if (!mesh.is_boundary(hh)) {
+		return false;
+	}
+	if (!mesh.has_edge_status())
+		mesh.request_edge_status();
+	if (!mesh.has_face_status())
+		mesh.request_face_status();
+	if (!mesh.has_vertex_status())
+		mesh.request_vertex_status();
+	Triangle_mesh hole_mesh;
+	std::vector<VertexHandle> boundary_vertex_;
+	std::vector<FaceHandle> hole_triangle_;
+	size_t  nb;
+	switch (type)
+	{
+	case FixType::idMinArea:
+		nb = minArea(mesh, hh, hole_mesh, boundary_vertex_);
+		break;
+	case FixType::idMinAreaMaxDiheral:
+		nb = minAreaAndDihedral(mesh, hh, hole_mesh, boundary_vertex_);
+		break;
+	case FixType::idMinAreaMaxDiheralNormal:
+		//Todo
+		assert("Todo");
+		break;
+	}
+	if (nb >= 8) {
 		Triangle_mesh chole = hole_mesh;
 
 		Real avge = calc_avg_length(mesh);
 
-		if (refineMesh(hole_mesh, boundary, avge))
+		if (refineMesh(hole_mesh, avge))
 		{
-			int nbound = (int)boundary.size();
+			int nbound = (int)nb;
 			int nhole = (int)hole_mesh.n_vertices();
 			auto points = hole_mesh.points();
+
 			for (int i = nbound; i < nhole; ++i) {
 				boundary_vertex_.push_back(mesh.add_vertex(points[i]));
 			}
@@ -1498,11 +1475,12 @@ bool HoleFiller::hole_fillC2(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 				int v0 = fv->idx(); ++fv;
 				int v1 = fv->idx(); ++fv;
 				int v2 = fv->idx();
-				mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
+				hole_triangle_.push_back(mesh.add_face(boundary_vertex_[v0],
+					boundary_vertex_[v1], boundary_vertex_[v2]));
 			}
-			Fair::SmoothMesh meshfair;
+			CFair::SmoothMesh meshfair;
 			std::vector<VertexHandle> fairvhs;
-			selectRRV(mesh, boundary_vertex_, 2, fairvhs);
+			selectRRV(mesh, boundary_vertex_, 3, fairvhs);
 			for (auto iv : mesh.vertices()) {
 				mesh.status(iv).set_locked(true);
 			}
@@ -1520,7 +1498,7 @@ bool HoleFiller::hole_fillC2(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 				std::cout << "poisson fail!" << std::endl;
 		}
 		else {
-			int nbound = (int)boundary.size();
+			int nbound = (int)nb;
 			int nhole = (int)chole.n_vertices();
 			auto points = chole.points();
 			for (int i = nbound; i < nhole; ++i) {
@@ -1531,13 +1509,14 @@ bool HoleFiller::hole_fillC2(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 				int v0 = fv->idx(); ++fv;
 				int v1 = fv->idx(); ++fv;
 				int v2 = fv->idx();
-				mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
+				hole_triangle_.push_back(mesh.add_face(boundary_vertex_[v0],
+					boundary_vertex_[v1], boundary_vertex_[v2]));
 			}
 		}
 	}
 	else
 	{
-		int nbound = (int)boundary.size();
+		int nbound = (int)nb;
 		int nhole = (int)hole_mesh.n_vertices();
 		auto points = hole_mesh.points();
 		for (int i = nbound; i < nhole; ++i) {
@@ -1548,7 +1527,8 @@ bool HoleFiller::hole_fillC2(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 			int v0 = fv->idx(); ++fv;
 			int v1 = fv->idx(); ++fv;
 			int v2 = fv->idx();
-			mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
+			hole_triangle_.push_back(mesh.add_face(boundary_vertex_[v0],
+				boundary_vertex_[v1], boundary_vertex_[v2]));
 		}
 	}
 	removeDegeneratedFaces(mesh, hole_triangle_);
@@ -1558,156 +1538,6 @@ bool HoleFiller::hole_fillC2(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stage
 	return true;
 }
 
-bool HoleFiller::hole_fillCK(Triangle_mesh& mesh, HalfedgeHandle& hh, int _stages)
-{
-	if (!mesh.is_boundary(hh)) {
-		return false;
-	}
-
-	if (!mesh.has_edge_status())
-		mesh.request_edge_status();
-	if (!mesh.has_face_status())
-		mesh.request_face_status();
-	if (!mesh.has_vertex_status())
-		mesh.request_vertex_status();
-	Triangle_mesh::VertexHandle old_last_handle = *(--mesh.vertices_end());
-
-	std::vector<VertexHandle> boundary_vertex_;
-	std::vector<VertexHandle> opposite_vertex_;
-	HalfedgeHandle ch = hh;
-	do {
-		boundary_vertex_.push_back(mesh.from_vertex_handle(ch));
-		opposite_vertex_.push_back(mesh.to_vertex_handle
-		(mesh.next_halfedge_handle(mesh.opposite_halfedge_handle(ch))));
-		int c = 0;
-		VertexHandle vh = mesh.to_vertex_handle(ch);
-		for (Triangle_mesh::VertexOHalfedgeIter voh_it(mesh, vh); voh_it.is_valid(); ++voh_it)
-			if (mesh.is_boundary(*voh_it))
-				c++;
-		if (c >= 2) {
-			HalfedgeHandle  op = mesh.opposite_halfedge_handle(ch);
-			typename Triangle_mesh::VertexOHalfedgeIter voh_it(mesh, op);
-			ch = *(++voh_it);
-		}
-		else
-			ch = mesh.next_halfedge_handle(ch);
-	} while (ch != hh);
-	int nv = (int)boundary_vertex_.size();
-	NMatrix<Weight> w_(nv, nv);
-	NMatrix<int> l_(nv, nv, 0);
-	for (int i = 0; i < nv - 1; ++i)
-		w_(i, i + 1) = Weight(0, 0, 0);
-	for (int j = 2; j < nv; ++j)
-	{
-#pragma omp parallel for shared(j)
-		for (int i = 0; i < nv - j; ++i)
-		{
-			Weight valmin;
-			int   argmin = -1;
-			for (int m = i + 1; m < i + j; ++m)
-			{
-				Weight newval = w_(i, m) + w_(m, i + j) + weight(mesh,
-					boundary_vertex_, opposite_vertex_, l_, i, m, i + j);
-				if (newval < valmin)
-				{
-					valmin = newval;
-					argmin = m;
-				}
-			}
-			w_(i, i + j) = valmin;
-			l_(i, i + j) = argmin;
-		}
-	}
-	std::vector< EdgeHandle > hole_edge_;
-	std::vector< FaceHandle > hole_triangle_;
-	Triangle_mesh hole_mesh;
-	std::vector<VertexHandle> boundary;
-	boundary.reserve(boundary_vertex_.size());
-	for (auto& ib : boundary_vertex_) {
-		boundary.emplace_back(hole_mesh.add_vertex(mesh.point(ib)));
-	}
-
-
-	if (fill(hole_mesh, boundary, l_, hole_edge_,
-		hole_triangle_, 0, nv - 1) && boundary_vertex_.size() > 10) {
-		if (_stages <= 1)
-			return true;
-		Triangle_mesh chole = hole_mesh;
-
-		Real avge = calc_avg_length(mesh);
-
-		if (refineMesh(hole_mesh, boundary, avge))
-		{
-			int nbound = (int)boundary.size();
-			int nhole = (int)hole_mesh.n_vertices();
-			auto points = hole_mesh.points();
-			for (int i = nbound; i < nhole; ++i) {
-				boundary_vertex_.push_back(mesh.add_vertex(points[i]));
-			}
-			for (auto f : hole_mesh.faces()) {
-				auto fv = hole_mesh.fv_begin(f);
-				int v0 = fv->idx(); ++fv;
-				int v1 = fv->idx(); ++fv;
-				int v2 = fv->idx();
-				mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
-			}
-			Fair::SmoothMesh meshfair;
-			std::vector<VertexHandle> fairvhs;
-			selectRRV(mesh, boundary_vertex_, 2, fairvhs);
-			for (auto iv : mesh.vertices()) {
-				mesh.status(iv).set_locked(true);
-			}
-			for (auto iv : boundary_vertex_) {
-				mesh.status(iv).set_locked(false);
-			}
-			OpenMesh::Smoother::SmootherT<Triangle_mesh>::Continuity
-				continuity = OpenMesh::Smoother::SmootherT<Triangle_mesh>::C1;
-			OpenMesh::Smoother::SmootherT<Triangle_mesh>::Component
-				component = OpenMesh::Smoother::SmootherT<Triangle_mesh>::Tangential_and_Normal;
-			OpenMesh::Smoother::JacobiLaplaceSmootherT<Triangle_mesh> smoother(mesh);
-			smoother.initialize(component, continuity);
-			smoother.smooth(5);
-			if (!meshfair.MeshFair(mesh, fairvhs, _stages))
-				std::cout << "poisson fail!" << std::endl;
-		}
-		else {
-			int nbound = (int)boundary.size();
-			int nhole = (int)chole.n_vertices();
-			auto points = chole.points();
-			for (int i = nbound; i < nhole; ++i) {
-				boundary_vertex_.push_back(mesh.add_vertex(points[i]));
-			}
-			for (auto f : chole.faces()) {
-				auto fv = chole.fv_begin(f);
-				int v0 = fv->idx(); ++fv;
-				int v1 = fv->idx(); ++fv;
-				int v2 = fv->idx();
-				mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
-			}
-		}
-	}
-	else
-	{
-		int nbound = (int)boundary.size();
-		int nhole = (int)hole_mesh.n_vertices();
-		auto points = hole_mesh.points();
-		for (int i = nbound; i < nhole; ++i) {
-			boundary_vertex_.push_back(mesh.add_vertex(points[i]));
-		}
-		for (auto f : hole_mesh.faces()) {
-			auto fv = hole_mesh.fv_begin(f);
-			int v0 = fv->idx(); ++fv;
-			int v1 = fv->idx(); ++fv;
-			int v2 = fv->idx();
-			mesh.add_face(boundary_vertex_[v0], boundary_vertex_[v1], boundary_vertex_[v2]);
-		}
-	}
-	removeDegeneratedFaces(mesh, hole_triangle_);
-	mesh.release_edge_status();
-	mesh.release_face_status();
-	mesh.release_vertex_status();
-	return true;
-}
 
 
 #pragma warning(pop)
